@@ -1,0 +1,23 @@
+Url url = new Url(contenido);
+            //llamar numeros telefonicos
+            //*PhoneNumber telefono = new PhoneNumber("+18092310141");*//
+
+            //enviar mensajes de texto
+            //*SMS mensaje = new SMS("+18092310141", "hola,SMS");*//
+
+            //enviar Mensajes a wsp
+            //*WhatsAppMessage mensajewsp = new WhatsAppMessage("+3427452452", "hola ");*//
+
+            //conectarse a red wifi
+            WiFi wifi = new WiFi("ORANGE-3886", "tryndamere100", WiFi.Authentication.WPA);
+
+            QRCodeGenerator QRgenerador = new QRCodeGenerator();
+            //genera el codigo QR
+            QRCodeData QRdatos = QRgenerador.CreateQrCode(wifi,QRCodeGenerator.ECCLevel.H);
+            QRCode QRcodigo = new QRCode(QRdatos);
+            //agregar imagen png al QR
+            //*Bitmap qrimange = QRcodigo.GetGraphic(5,Color.Black,Color.White, (Bitmap) Bitmap.FromFile(@"C:\Users\carlo\Downloads\descarga.png"));*//
+
+            // Bitmap para que muestre la imagen, getgraphic propiedades del codigo qr
+            Bitmap qrimange = QRcodigo.GetGraphic(5,Color.Black,Color.White,true);
+            pictureBox1.Image = qrimange;
