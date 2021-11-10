@@ -1,4 +1,9 @@
-Url url = new Url(contenido);
+ 
+ private void Generar_Click(object sender, EventArgs e)
+        {
+            string contenido = textBox1.Text;
+
+            Url url = new Url(contenido);
             //llamar numeros telefonicos
             //*PhoneNumber telefono = new PhoneNumber("+18092310141");*//
 
@@ -21,3 +26,4 @@ Url url = new Url(contenido);
             // Bitmap para que muestre la imagen, getgraphic propiedades del codigo qr
             Bitmap qrimange = QRcodigo.GetGraphic(5,Color.Black,Color.White,true);
             pictureBox1.Image = qrimange;
+        }
