@@ -5,16 +5,16 @@
 
             Url url = new Url(contenido);
             //llamar numeros telefonicos
-            //*PhoneNumber telefono = new PhoneNumber("+18092310141");*//
+            //*PhoneNumber telefono = new PhoneNumber("");*//
 
             //enviar mensajes de texto
-            //*SMS mensaje = new SMS("+18092310141", "hola,SMS");*//
+            //*SMS mensaje = new SMS("", "hola,SMS");*//
 
             //enviar Mensajes a wsp
-            //*WhatsAppMessage mensajewsp = new WhatsAppMessage("+3427452452", "hola ");*//
+            //*WhatsAppMessage mensajewsp = new WhatsAppMessage("", "hola ");*//
 
             //conectarse a red wifi
-            WiFi wifi = new WiFi("ORANGE-3886", "tryndamere100", WiFi.Authentication.WPA);
+            WiFi wifi = new WiFi("", "", WiFi.Authentication.WPA);
 
             QRCodeGenerator QRgenerador = new QRCodeGenerator();
             //genera el codigo QR
